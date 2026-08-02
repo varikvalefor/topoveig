@@ -19,6 +19,9 @@ open import Data.Product
     Σ
   )
 open import Relation.Nullary
+  using (
+    ¬_
+  )
 
 ℝ : Set
 ℝ = {!!}
