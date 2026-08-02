@@ -63,4 +63,27 @@ module Mupli where
 
     Ambiguous : Term → Set
     Ambiguous = VA.Am Term MeaningOf Dun
+
+  module Lijda where
+    Lijda : Set
+    Lijda = {!!}
+
+    IsSatanism : Lijda → Set
+    IsSatanism = {!!}
+
+    SatanicProp : Set
+    SatanicProp = {!!}
+
+    sp : Lijda → SatanicProp
+    sp = {!!}
+
+    sp≈ : Set → (_ _ : SatanicProp) → Set
+    sp≈ = {!!}
+
+    -- ni'o la .varik. cu morji le du'u vo'a
+    -- retsku le na'e tarmi preti se pi'o le tavla
+    -- kumfa pe'a
+    -- .i na birti fa la .varik.
+    preti_se_ctaipe : Set
+    preti_se_ctaipe = VA.Vg _ (λ x → SatanicProp) sp≈ $ Σ Lijda IsSatanism
 \end{code}
