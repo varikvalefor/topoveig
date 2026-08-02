@@ -41,6 +41,19 @@ module VA {a b : Agda.Primitive.Level}
   Am : A → Set b
   Am = ¬_ ∘ Vg
 
+module VA2 {a b : Agda.Primitive.Level}
+           (A : Set a)
+           (B : Set b)
+           (f : A → B)
+           (_≈_ : B → B → Set b)
+  where
+  Vg : Set (a Agda.Primitive.⊔ b)
+  Vg = (x z : A)
+     → Σ (I → B) $ λ i → (i i0 ≈ f x) × (i i1 ≈ f z)
+
+  Am : typeOf Vg
+  Am = ¬ Vg
+
 module Mupli where
   module Bangu where
     Term : Set
