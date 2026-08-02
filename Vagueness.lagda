@@ -49,7 +49,7 @@ module VA2 {a b : Agda.Primitive.Level}
   where
   Vg : Set (a Agda.Primitive.⊔ b)
   Vg = (x z : A)
-     → Σ (I → B) $ λ i → (i i0 ≈ f x) × (i i1 ≈ f z)
+     → Σ (I → B) $ λ i → (f x ≈ i i0) × (f z ≈ i i1)
 
   Am : typeOf Vg
   Am = ¬ Vg
