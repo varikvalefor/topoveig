@@ -12,6 +12,12 @@ open import Function
     id
   )
 open import Data.Product
+  using (
+    proj₁;
+    _×_;
+    _,_;
+    Σ
+  )
 open import Relation.Nullary
 
 ℝ : Set
