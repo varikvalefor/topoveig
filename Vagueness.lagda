@@ -28,22 +28,33 @@ i0 = 0r , {!!}
 i1 : I
 i1 = 1r , {!!}
 
-Term : Set
-Term = {!!}
+module VA {a b : Agda.Primitive.Level}
+          (A : Set a)
+          (B : A → Set b)
+  where
+  Vg : A → Set b
+  Vg t = (x z : B t) → Σ (I → B t) $ λ f → (f i0 ≡ x) × (f i1 ≡ z)
 
-Meaning : Set
-Meaning = {!!}
+  Am : A → Set b
+  Am = ¬_ ∘ Vg
 
-IsMeaning : Term → Meaning → Set
-IsMeaning = {!!}
+module Mupli where
+  module Bangu where
+    Term : Set
+    Term = {!!}
 
-MeaningOf : Term → Set
-MeaningOf = Σ Meaning ∘ IsMeaning
+    Meaning : Set
+    Meaning = {!!}
 
-Vague : Term → Set
-Vague t = (x z : MeaningOf t)
-        → Σ (I → MeaningOf t) $ λ f → (f i0 ≡ x) × (f i1 ≡ z)
+    IsMeaning : Term → Meaning → Set
+    IsMeaning = {!!}
 
-Ambiguous : Term → Set
-Ambiguous = ¬_ ∘ Vague
+    MeaningOf : Term → Set
+    MeaningOf = Σ Meaning ∘ IsMeaning
+
+    Vague : Term → Set
+    Vague = VA.Vg Term MeaningOf
+
+    Ambiguous : Term → Set
+    Ambiguous = VA.Am Term MeaningOf
 \end{code}
