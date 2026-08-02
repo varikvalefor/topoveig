@@ -27,7 +27,7 @@ i0 = 0r , {!!}
 i1 : I
 i1 = 1r , {!!}
 
-module VA {a b : Agda.Primitive.Level}
+module VA {a b}
           (A : Set a)
           (B : A → Set b)
           (_≈_ : (x : A) → (_ _ : B x) → Set b)
