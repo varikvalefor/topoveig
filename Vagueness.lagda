@@ -54,6 +54,14 @@ module VA2 {a b : Agda.Primitive.Level}
   Am : typeOf Vg
   Am = ¬ Vg
 
+_ : ∀ {a b} → {A : Set a} → {B : A → Set b}
+  → (x : A)
+  → (_≈_ : (x : A) → (_ _ : B x) → Set b)
+  → VA.Vg A B _≈_ x
+  → (x1 x2 : B x)
+  → VA2.Vg (B x) (B x) id (_≈_ _)
+_ = {!!}
+
 module Mupli where
   module Bangu where
     Term : Set
