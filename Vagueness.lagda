@@ -60,7 +60,7 @@ _ : ∀ {a b} → {A : Set a} → {B : A → Set b}
   → VA.Vg A B _≈_ x
   → (x1 x2 : B x)
   → VA2.Vg (B x) (B x) id (_≈_ _)
-_ = λ _ _≈_ x₁ x1 x2 → x₁
+_ = λ _ _ x₁ x1 x2 → x₁
 
 module Mupli where
   module Bangu where
