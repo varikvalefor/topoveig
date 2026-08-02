@@ -5,6 +5,12 @@
 module Vagueness where
 
 open import Function
+  using (
+    typeOf;
+    _∘_;
+    _$_;
+    id
+  )
 open import Data.Product
 open import Relation.Nullary
 
