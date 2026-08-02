@@ -29,8 +29,10 @@ open import Relation.Nullary
 _≤_ : ℝ → ℝ → Set
 _≤_ = {!!}
 
-0r 1r : ℝ
+0r : ℝ
 0r = {!!}
+
+1r : ℝ
 1r = {!!}
 
 I : Set
