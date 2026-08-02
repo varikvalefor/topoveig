@@ -41,7 +41,7 @@ module VA {a b : Agda.Primitive.Level}
   Am : A → Set b
   Am = ¬_ ∘ Vg
 
-module VA2 {a b : Agda.Primitive.Level}
+module VA2 {a b}
            (A : Set a)
            (B : Set b)
            (f : A → B)
