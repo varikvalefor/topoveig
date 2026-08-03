@@ -85,6 +85,9 @@ module VA2 {a b}
   Vg!→Vg : Vg! → Vg
   Vg!→Vg = Σ.proj₁
 
+  Am→¬Sp : Am → ¬ Sp
+  Am→¬Sp ((x , z) , N) sp = N $ (λ _ → f x) , sp x x , sp z x
+
   Am!→Am : Am! → Am
   Am!→Am = Σ.proj₁
 
