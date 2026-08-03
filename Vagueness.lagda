@@ -13,10 +13,12 @@ open import Function
   )
 open import Data.Product
   using (
+    uncurry;
     proj₁;
     _×_;
     _,_;
-    Σ
+    Σ;
+    ∃
   )
 open import Relation.Nullary
   using (
@@ -71,7 +73,7 @@ module VA2 {a b}
   Vg = (x z : A) → J x z
 
   Am : typeOf Vg
-  Am = Data.Product.∃ $ ¬_ ∘ Data.Product.uncurry J
+  Am = ∃ $ ¬_ ∘ uncurry J
 
   Sp : Set (a Agda.Primitive.⊔ b)
   Sp = (x z : A) → f x ≈ f z
