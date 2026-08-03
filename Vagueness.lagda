@@ -259,20 +259,11 @@ module Mupli where
     IsSatanism : Lijda → Set
     IsSatanism = {!!}
 
-    SatanicProp : Set
-    SatanicProp = {!!}
-
-    sp : Lijda → SatanicProp
-    sp = {!!}
-
-    sp≈ : (_ _ : SatanicProp) → Set
-    sp≈ = {!!}
-
     -- ni'o la .varik. cu morji le du'u vo'a
     -- retsku le na'e tarmi preti se pi'o le tavla
     -- kumfa pe'a
     -- .i na birti fa la .varik.
     preti_se_ctaipe : Set
-    preti_se_ctaipe = VA2.Vg (Σ Lijda IsSatanism) SatanicProp (sp ∘ proj₁) {!!} sp≈
+    preti_se_ctaipe = VA2.Vg (Σ Lijda IsSatanism) _ id {!!} {!!}
 \end{code}
 \end{document}
