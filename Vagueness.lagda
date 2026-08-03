@@ -73,6 +73,21 @@ module VA2 {a b}
   Am : typeOf Vg
   Am = Data.Product.∃ $ ¬_ ∘ Data.Product.uncurry J
 
+  Sp : Set (a Agda.Primitive.⊔ b)
+  Sp = (x z : A) → f x ≈ f z
+
+  Vg! : Set (a Agda.Primitive.⊔ b)
+  Vg! = Vg × ¬ Sp
+
+  Am! : typeOf Am
+  Am! = Am × ¬ Sp
+
+  Vg!→Vg : Vg! → Vg
+  Vg!→Vg = Σ.proj₁
+
+  Am!→Am : Am! → Am
+  Am!→Am = Σ.proj₁
+
 VA→VA2 : ∀ {a b} → {A : Set a} → {B : A → Set b}
        → (x : A)
        → (_≈_ : (x : A) → (_ _ : B x) → Set b)
