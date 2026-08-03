@@ -4,6 +4,11 @@
 
 module Vagueness where
 
+open import Level
+  using (
+    zero;
+    _⊔_
+  )
 open import Function
   using (
     typeOf;
@@ -51,13 +56,13 @@ module VA {a b c}
       I
     )
 
-  Vg : A → Set (b Agda.Primitive.⊔ c)
+  Vg : A → Set (b ⊔ c)
   Vg t = (x z : B t)
        → (Σ
            (I → B t)
            (λ f → _≈_ t x (f i0) × _≈_ t z (f i1)))
 
-  Am : A → Set (b Agda.Primitive.⊔ c)
+  Am : A → Set (b ⊔ c)
   Am = ¬_ ∘ Vg
 
 module VA2 {a b c}
@@ -74,19 +79,19 @@ module VA2 {a b c}
       I
     )
 
-  J : A → A → Set (b Agda.Primitive.⊔ c)
+  J : A → A → Set (b ⊔ c)
   J x z = Σ (I → B) $ λ i → (f x ≈ i i0) × (f z ≈ i i1)
 
-  Vg : Set (a Agda.Primitive.⊔ b Agda.Primitive.⊔ c)
+  Vg : Set (a ⊔ b ⊔ c)
   Vg = (x z : A) → J x z
 
   Am : typeOf Vg
   Am = ∃ $ ¬_ ∘ uncurry J
 
-  Sp : Set (a Agda.Primitive.⊔ b)
+  Sp : Set (a ⊔ b)
   Sp = (x z : A) → f x ≈ f z
 
-  Vg! : Set (a Agda.Primitive.⊔ b Agda.Primitive.⊔ c)
+  Vg! : Set (a ⊔ b ⊔ c)
   Vg! = Vg × ¬ Sp
 
   Am! : typeOf Am
@@ -127,7 +132,7 @@ module Mupli where
     Dun : (x : Term) → (_ _ : MeaningOf x) → Set
     Dun = {!!}
 
-    Ix : Interval Agda.Primitive.lzero
+    Ix : Interval zero
     Ix = {!!}
 
     Vague : Term → Set
