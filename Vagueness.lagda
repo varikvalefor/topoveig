@@ -108,7 +108,7 @@
 
 \begin{document}
 \begin{code}
-{-# OPTIONS --cubical #-}
+{-# OPTIONS --cubical-compatible #-}
 {-# OPTIONS --safe #-}
 
 module Vagueness where
