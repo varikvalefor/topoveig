@@ -88,6 +88,9 @@ module VA2 {a b c}
   Am : typeOf Vg
   Am = ∃ $ ¬_ ∘ uncurry J
 
+  Am→¬Vg : Am → ¬ Vg
+  Am→¬Vg ((x , z) , N) vg = N $ vg x z
+
   Sp : Set (a ⊔ b)
   Sp = (x z : A) → f x ≈ f z
 
