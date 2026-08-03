@@ -71,13 +71,13 @@ module VA2 {a b}
   Am : typeOf Vg
   Am = ¬ Vg
 
-_ : ∀ {a b} → {A : Set a} → {B : A → Set b}
-  → (x : A)
-  → (_≈_ : (x : A) → (_ _ : B x) → Set b)
-  → VA.Vg A B _≈_ x
-  → (x1 x2 : B x)
-  → VA2.Vg (B x) (B x) id (_≈_ _)
-_ = λ _ _ x₁ _ _ → x₁
+VA→VA2 : ∀ {a b} → {A : Set a} → {B : A → Set b}
+       → (x : A)
+       → (_≈_ : (x : A) → (_ _ : B x) → Set b)
+       → VA.Vg A B _≈_ x
+       → (x1 x2 : B x)
+       → VA2.Vg (B x) (B x) id (_≈_ _)
+VA→VA2 = λ _ _ x₁ _ _ → x₁
 
 module Mupli where
   module Bangu where
