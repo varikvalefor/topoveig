@@ -64,9 +64,11 @@ module VA2 {a b}
            (f : A → B)
            (_≈_ : B → B → Set b)
   where
+  J : A → A → Set b
+  J x z = Σ (I → B) $ λ i → (f x ≈ i i0) × (f z ≈ i i1)
+
   Vg : Set (a Agda.Primitive.⊔ b)
-  Vg = (x z : A)
-     → Σ (I → B) $ λ i → (f x ≈ i i0) × (f z ≈ i i1)
+  Vg = (x z : A) → J x z
 
   Am : typeOf Vg
   Am = ¬ Vg
