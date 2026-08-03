@@ -71,7 +71,7 @@ module VA2 {a b}
   Vg = (x z : A) → J x z
 
   Am : typeOf Vg
-  Am = ¬ Vg
+  Am = Data.Product.∃ $ ¬_ ∘ Data.Product.uncurry J
 
 VA→VA2 : ∀ {a b} → {A : Set a} → {B : A → Set b}
        → (x : A)
