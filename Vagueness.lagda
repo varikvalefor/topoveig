@@ -125,6 +125,7 @@ open import Level
 open import Function
   using (
     typeOf;
+    _on_;
     _∘_;
     _$_;
     id
@@ -287,6 +288,6 @@ module Mupli where
     -- kumfa pe'a
     -- .i na birti fa la .varik.
     preti_se_ctaipe : Set
-    preti_se_ctaipe = VA2.Vg (Σ Lijda IsSatanism) _ id {!!} $ _≈_ Function.on proj₁
+    preti_se_ctaipe = VA2.Vg (Σ Lijda IsSatanism) _ id {!!} $ _≈_ on proj₁
 \end{code}
 \end{document}
