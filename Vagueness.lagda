@@ -107,6 +107,10 @@
 \author{la .varik.\ .VALefor.}
 
 \begin{document}
+\maketitle
+
+\section{le vrici}
+
 \begin{code}
 {-# OPTIONS --cubical-compatible #-}
 {-# OPTIONS --safe #-}
@@ -142,7 +146,11 @@ open import Relation.Nullary
   using (
     ¬_
   )
+\end{code}
 
+\section{le me'oi .interval.\ se ctaipe}
+
+\begin{code}
 record Interval a : Set (Agda.Primitive.lsuc a) where
   field
     I : Set a
@@ -151,7 +159,11 @@ record Interval a : Set (Agda.Primitive.lsuc a) where
     _≈_ : I → I → Set a
     Eqv : IsEquivalence _≈_
     nd : ¬_ $ i0 ≈ i1
+\end{code}
 
+\section{le mutce be le ka ce'u sucta}
+
+\begin{code}
 module VA {a b c}
           (A : Set a)
           (B : A → Set b)
@@ -173,7 +185,11 @@ module VA {a b c}
 
   Am : A → Set (b ⊔ c)
   Am = ¬_ ∘ Vg
+\end{code}
 
+\section{le zmadu be fi le ka la .varik.\ cu jinvi lo du'u frili fa lo nu pilno ce'u}
+
+\begin{code}
 module VA2 {a b c}
            (A : Set a)
            (B : Set b)
@@ -225,7 +241,11 @@ VA→VA2 : ∀ {a b c} → {A : Set a} → {B : A → Set b}
        → VA.Vg A B Iv _≈_ x
        → VA2.Vg (B x) (B x) id Iv (_≈_ _)
 VA→VA2 _ _ _ = id
+\end{code}
 
+\section{le mupli}
+
+\begin{code}
 module Mupli where
   module Bangu where
     Term : Set
