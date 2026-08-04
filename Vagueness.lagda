@@ -279,11 +279,14 @@ module Mupli where
     IsSatanism : Lijda → Set
     IsSatanism = {!!}
 
+    _≈_ : Lijda → Lijda → Set
+    _≈_ = {!!}
+
     -- ni'o la .varik. cu morji le du'u vo'a
     -- retsku le na'e tarmi preti se pi'o le tavla
     -- kumfa pe'a
     -- .i na birti fa la .varik.
     preti_se_ctaipe : Set
-    preti_se_ctaipe = VA2.Vg (Σ Lijda IsSatanism) _ id {!!} {!!}
+    preti_se_ctaipe = VA2.Vg (Σ Lijda IsSatanism) _ id {!!} $ _≈_ Function.on proj₁
 \end{code}
 \end{document}
