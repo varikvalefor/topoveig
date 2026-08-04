@@ -288,6 +288,8 @@ module Mupli where
     -- kumfa pe'a
     -- .i na birti fa la .varik.
     preti_se_ctaipe : Set
-    preti_se_ctaipe = VA2.Vg (Σ Lijda IsSatanism) _ id {!!} $ _≈_ on proj₁
+    preti_se_ctaipe = VA2.Vg S _ id {!!} $ _≈_ on proj₁
+      where
+      S = Σ Lijda IsSatanism
 \end{code}
 \end{document}
