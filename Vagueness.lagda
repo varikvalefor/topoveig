@@ -130,6 +130,10 @@ open import Function
     _$_;
     id
   )
+open import Data.Sum
+  using (
+    _⊎_
+  )
 open import Data.Product
   using (
     uncurry;
@@ -297,7 +301,7 @@ module Mupli where
     -- retsku le na'e tarmi preti se pi'o le tavla
     -- kumfa pe'a
     -- .i na birti fa la .varik.
-    preti_se_ctaipe : Set
-    preti_se_ctaipe = Px VA2.Vg
+    preti : Px VA2.Vg ⊎ Px VA2.Am
+    preti = {!!}
 \end{code}
 \end{document}
