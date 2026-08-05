@@ -206,7 +206,7 @@ module VA {a b c}
   Vg t = (x z : B t) → J x z
 
   Am : A → Set (b ⊔ c)
-  Am = ¬_ ∘ Vg
+  Am t = ∃ $ ¬_ ∘ uncurry (J {t})
 \end{code}
 
 \section{le zmadu be fi le ka la .varik.\ cu jinvi lo du'u frili fa lo nu pilno ce'u}
