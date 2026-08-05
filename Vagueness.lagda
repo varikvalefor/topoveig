@@ -143,6 +143,11 @@ open import Data.Product
     Σ;
     ∃
   )
+open import Data.Rational
+  as ℚ
+  using (
+    ℚ
+  )
 open import Relation.Binary
   using (
     IsEquivalence
@@ -150,6 +155,11 @@ open import Relation.Binary
 open import Relation.Nullary
   using (
     ¬_
+  )
+open import Relation.Binary.PropositionalEquality
+  as ≡
+  using (
+    _≡_
   )
 \end{code}
 
@@ -295,13 +305,22 @@ module Mupli where
     _≈_ : Lijda → Lijda → Set
     _≈_ = {!!}
 
+    Iv : Interval zero
+    Iv = record {
+      I = ℚ;
+      i0 = ℚ.0ℚ;
+      i1 = ℚ.1ℚ;
+      _≈_ = _≡_;
+      Eqv = ≡.isEquivalence;
+      nd = λ ()
+      }
 
     -- ni'o la .varik. cu morji le du'u vo'a
     -- retsku le na'e tarmi preti se pi'o le tavla
     -- kumfa pe'a
     -- .i na birti fa la .varik.
     preti : let S = Σ Lijda IsSatanism in
-            let Px = λ f → f S _ id {!!} $ _≈_ on proj₁ in
+            let Px = λ f → f S _ id Iv $ _≈_ on proj₁ in
             Px VA2.Vg ⊎ Px VA2.Am
     preti = {!!}
 \end{code}
