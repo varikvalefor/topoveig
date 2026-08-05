@@ -195,13 +195,15 @@ module VA {a b c}
   FricaC : {t : A} → (I → B t) → Set (b ⊔ c)
   FricaC i = (j k : I) → _≈_ _ (i j) (i k) → Interval._≈_ Iv j k
 
+  J : {t : A} → (_ _ : B t) → Set (b ⊔ c)
+  J {t} x z = (Σ
+                (I → B t)
+                (λ f → _×_
+                  (FricaC f)
+                  (_≈_ t x (f i0) × _≈_ t z (f i1))))
+
   Vg : A → Set (b ⊔ c)
-  Vg t = (x z : B t)
-       → (Σ
-           (I → B t)
-           (λ f → _×_
-             (FricaC f)
-             (_≈_ t x (f i0) × _≈_ t z (f i1))))
+  Vg t = (x z : B t) → J x z
 
   Am : A → Set (b ⊔ c)
   Am = ¬_ ∘ Vg
