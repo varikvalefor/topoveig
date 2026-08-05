@@ -182,11 +182,16 @@ module VA {a b c}
       I
     )
 
+  FricaC : {t : A} → (I → B t) → Set (b ⊔ c)
+  FricaC i = (j k : I) → _≈_ _ (i j) (i k) → Interval._≈_ Iv j k
+
   Vg : A → Set (b ⊔ c)
   Vg t = (x z : B t)
        → (Σ
            (I → B t)
-           (λ f → _≈_ t x (f i0) × _≈_ t z (f i1)))
+           (λ f → _×_
+             (FricaC f)
+             (_≈_ t x (f i0) × _≈_ t z (f i1))))
 
   Am : A → Set (b ⊔ c)
   Am = ¬_ ∘ Vg
@@ -209,8 +214,11 @@ module VA2 {a b c}
       I
     )
 
+  FricaC : (I → B) → Set (b ⊔ c)
+  FricaC i = (j k : I) → i j ≈ i k → Interval._≈_ Iv j k
+
   J : A → A → Set (b ⊔ c)
-  J x z = Σ (I → B) $ λ i → (f x ≈ i i0) × (f z ≈ i i1)
+  J x z = Σ (I → B) $ λ i → FricaC i × (f x ≈ i i0) × (f z ≈ i i1)
 
   Vg : Set (a ⊔ b ⊔ c)
   Vg = (x z : A) → J x z
@@ -234,7 +242,7 @@ module VA2 {a b c}
   Vg!→Vg = Σ.proj₁
 
   Am→¬Sp : Am → ¬ Sp
-  Am→¬Sp ((x , z) , N) sp = N $ (λ _ → f x) , sp x x , sp z x
+  Am→¬Sp ((x , z) , N) sp = N $ (λ _ → f x) , {!!} , sp x x , sp z x
 
   Am!→Am : Am! → Am
   Am!→Am = Σ.proj₁
