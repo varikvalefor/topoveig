@@ -295,21 +295,14 @@ module Mupli where
     _≈_ : Lijda → Lijda → Set
     _≈_ = {!!}
 
-    Px : (_ : (X Z : Set)
-            → (X → Z)
-            → Interval zero
-            → (Z → Z → Set)
-            → Set)
-       → Set
-    Px f = f S _ id {!!} $ _≈_ on proj₁
-      where
-      S = Σ Lijda IsSatanism
 
     -- ni'o la .varik. cu morji le du'u vo'a
     -- retsku le na'e tarmi preti se pi'o le tavla
     -- kumfa pe'a
     -- .i na birti fa la .varik.
-    preti : Px VA2.Vg ⊎ Px VA2.Am
+    preti : let S = Σ Lijda IsSatanism in
+            let Px = λ f → f S _ id {!!} $ _≈_ on proj₁ in
+            Px VA2.Vg ⊎ Px VA2.Am
     preti = {!!}
 \end{code}
 \end{document}
