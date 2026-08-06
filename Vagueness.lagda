@@ -109,6 +109,15 @@
 \begin{document}
 \maketitle
 
+\section{le te kajde}
+\paragraph{la .lojban.}
+ni'o la .varik.\ cu kajde fi zo'e joi le su'u su'o da zo'u vo'a na'e skicu da bau la .lojban.\ ja le glibau ki'u zo'e joi lo su'u vo'a na jinvi lo du'u lo nu skicu da bau la .lojban. ja le glibau cu jai filri'a lo nu mutce lo ka ce'u jimpe fi da\sds  .i ji'a la .varik.\ cu jinvi le du'u le gerna be la'oi .Agda.\ cu zmadu fi le ka ce'u mapti\\
+.i ku'i la .varik.\ cu co'e ja djica curmi lo nu retsku\sds  .i la .varik.\ na djuno le du'u lo nu retsku na filri'a lo nu facki fi lo velski je jai filri'a
+
+\paragraph{English}
+VARIK cautions.  Some thing $t$ exists such that (VARIK does not explain (via English or Lojban) $t$, and the reason for not explaining is relevant to that (VARIK does not opine that explaining (via English or Lojban) $t$ facilitates being extreme in understanding about $t$)).  Additionally, VARIK opines that the syntax of Agda exceeds in being appropriate.\\
+But VARIK welcomes questions.  VARIK does not know that questions do not facilitate discovering about descriptions which facilitate.
+
 \section{le vrici / The Miscellaneous}
 
 \begin{code}
