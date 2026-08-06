@@ -325,5 +325,22 @@ module Mupli where
             let Px = λ f → f S _ id Iv $ _≈_ on proj₁ in
             Px VA2.Vg ⊎ Px VA2.Am
     preti = {!!}
+
+  module Chomsky where
+    BanguKlesi : Set
+    BanguKlesi = {!!}
+
+    Idiolect : BanguKlesi → Set
+    Idiolect = {!!}
+
+    Iv : Interval zero
+    Iv = {!!}
+
+    _≈_ : (t : _) → (_ _ : Idiolect t) → Set
+    _≈_ = {!!}
+
+    _ : let Px = λ f → (t : _) → f BanguKlesi Idiolect Iv _≈_ t in
+        Px VA.Vg ⊎ Px VA.Am
+    _ = {!!}
 \end{code}
 \end{document}
