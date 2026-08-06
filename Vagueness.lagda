@@ -103,6 +103,8 @@
 \newcommand\Op[1]{\AgdaOperator{#1}}
 \newcommand\OpF[1]{\Op{\F{#1}}}
 
+\newcommand\sds{\spacefactor\sfcode`.\ \space}
+
 \title{la'o zoi.\ \texttt{Vagueness}\ .zoi.}
 \author{la .varik.\ .VALefor.}
 
