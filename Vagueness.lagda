@@ -109,7 +109,7 @@
 \begin{document}
 \maketitle
 
-\section{le vrici}
+\section{le vrici / The Miscellaneous}
 
 \begin{code}
 {-# OPTIONS --cubical-compatible #-}
@@ -163,7 +163,7 @@ open import Relation.Binary.PropositionalEquality
   )
 \end{code}
 
-\section{le me'oi .interval.\ se ctaipe}
+\section{le me'oi .interval.\ se ctaipe / The Interval Type}
 
 \begin{code}
 record Interval a : Set (Agda.Primitive.lsuc a) where
@@ -176,7 +176,7 @@ record Interval a : Set (Agda.Primitive.lsuc a) where
     nd : ¬_ $ i0 ≈ i1
 \end{code}
 
-\section{le mutce be le ka ce'u sucta}
+\section{le mutce be le ka ce'u sucta / The Thing which is Very Abstract}
 
 \begin{code}
 module VA {a b c}
@@ -209,7 +209,7 @@ module VA {a b c}
   Am t = ∃ $ ¬_ ∘ uncurry (J {t})
 \end{code}
 
-\section{le zmadu be fi le ka la .varik.\ cu jinvi lo du'u frili fa lo nu pilno ce'u}
+\section{le zmadu be fi le ka la .varik.\ cu jinvi lo du'u frili fa lo nu pilno ce'u / The Thing which (as-opined-by VARIK) Exceeds in Being Easy and in Being Usable}
 
 \begin{code}
 module VA2 {a b c}
@@ -268,7 +268,7 @@ VA→VA2 : ∀ {a b c} → {A : Set a} → {B : A → Set b}
 VA→VA2 _ _ _ = id
 \end{code}
 
-\section{le mupli}
+\section{le mupli / Examples}
 
 \begin{code}
 module Mupli where
