@@ -265,7 +265,7 @@ module VA2 {a b c}
   Vg!→Vg = Σ.proj₁
 
   Am→¬Sp : Am → ¬ Sp
-  Am→¬Sp ((x , z) , N) sp = N $ (λ _ → f x) , {!!} , sp x x , sp z x
+  Am→¬Sp ((x , z) , N) sp = N ({!!} , ? , ?)
 
   Am!→Am : Am! → Am
   Am!→Am = Σ.proj₁
