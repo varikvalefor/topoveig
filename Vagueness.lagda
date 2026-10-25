@@ -223,6 +223,11 @@ module VA {a b c}
 \end{code}
 
 \subsection{lo se ctaipe co su'u ranji pe'a smuvrici / The Types regarding Vagueness}
+\paragraph{la .lojban.}
+ni'o la .varik.\ cu jinvi le du'u ro da zo'u ga jo ctaipe lo me'oi .\F{Vg}.\ be da gi lo ro ctaipe be lo me'oi .\B{B}.\ be da cu jorne pe'a lo ro ctaipe be lo me'oi .\B{B}.\ be da
+
+\paragraph{English}
+VARIK opines that for all \B t, iff a term of \F{Vg} \B t exists, then all terms of \B B \B t are ``connected'' to all terms of \B B \B t.
 
 \begin{code}
   Vg : A → Set (b ⊔ c)
