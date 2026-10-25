@@ -211,6 +211,8 @@ module VA {a b c}
   FricaC i = (j k : I) → _≈_ _ (i j) (i k) → Interval._≈_ Iv j k
 \end{code}
 
+\subsection{lo se ctaipe co su'u jorne pe'a / The Types regarding ``Connectedness''}
+
 \begin{code}
   J : {t : A} → (_ _ : B t) → Set (b ⊔ c)
   J {t} x z = (Σ
@@ -220,10 +222,14 @@ module VA {a b c}
                   (_≈_ t x (f i0) × _≈_ t z (f i1))))
 \end{code}
 
+\subsection{lo se ctaipe co su'u ranji pe'a smuvrici / The Types regarding Vagueness}
+
 \begin{code}
   Vg : A → Set (b ⊔ c)
   Vg t = (x z : B t) → J x z
 \end{code}
+
+\subsection{lo se ctaipe co su'u na'e ranji pe'a smuvrici / The Types regarding Ambiguity}
 
 \begin{code}
   Am : A → Set (b ⊔ c)
