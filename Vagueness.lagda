@@ -204,6 +204,8 @@ module VA {a b c}
     )
 \end{code}
 
+\subsection{lo se ctaipe co su'u pluta pe'a dunli / The Types regarding Path-Equality}
+
 \begin{code}
   FricaC : {t : A} → (I → B t) → Set (b ⊔ c)
   FricaC i = (j k : I) → _≈_ _ (i j) (i k) → Interval._≈_ Iv j k
