@@ -262,40 +262,64 @@ module VA2 {a b c}
       i1;
       I
     )
+\end{code}
 
+\begin{code}
   FricaC : (I → B) → Set (b ⊔ c)
   FricaC i = (j k : I) → i j ≈ i k → Interval._≈_ Iv j k
+\end{code}
 
+\begin{code}
   J : A → A → Set (b ⊔ c)
   J x z = Σ (I → B) $ λ i → FricaC i × (f x ≈ i i0) × (f z ≈ i i1)
+\end{code}
 
+\begin{code}
   Vg : Set (a ⊔ b ⊔ c)
   Vg = (x z : A) → J x z
+\end{code}
 
+\begin{code}
   Am : typeOf Vg
   Am = ∃ $ ¬_ ∘ uncurry J
+\end{code}
 
+\begin{code}
   Am→¬Vg : Am → ¬ Vg
   Am→¬Vg ((x , z) , N) vg = N $ vg x z
+\end{code}
 
+\begin{code}
   Sp : Set (a ⊔ b)
   Sp = (x z : A) → f x ≈ f z
+\end{code}
 
+\begin{code}
   Vg! : Set (a ⊔ b ⊔ c)
   Vg! = Vg × ¬ Sp
+\end{code}
 
+\begin{code}
   Am! : typeOf Am
   Am! = Am × ¬ Sp
+\end{code}
 
+\begin{code}
   Vg!→Vg : Vg! → Vg
   Vg!→Vg = Σ.proj₁
+\end{code}
 
+\begin{code}
   Am→¬Sp : Am → ¬ Sp
   Am→¬Sp ((x , z) , N) sp = N $ {!!} , {!!} , {!!}
+\end{code}
 
+\begin{code}
   Am!→Am : Am! → Am
   Am!→Am = Σ.proj₁
+\end{code}
 
+\begin{code}
 VA→VA2 : ∀ {a b c} → {A : Set a} → {B : A → Set b}
        → (x : A)
        → (Iv : Interval c)
