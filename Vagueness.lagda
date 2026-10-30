@@ -272,6 +272,11 @@ module VA2 {a b c}
 \end{code}
 
 \subsection{lo se ctaipe co su'u jorne pe'a / The Types regarding ``Connectedness''}
+\paragraph{la .lojban.}
+ni'o sa'u la .varik.\ cu jinvi le du'u ga jo ctaipe la'o zoi.\ \F J \B x \B z\ .zoi.\ gi la'e zo'oi .\B x.\ na'e ke tolmapti sampu ke'e ke me'oi .\B f.\ jorne pe'a la'e zo'oi .\B z.
+
+\paragraph{English}
+SIMPLIFICATION.\@  VARIK opines that (a term of \F J \B x \B z\ exists iff \B x is non-trivially \B f-connected to \B z).
 
 \begin{code}
   J : A → A → Set (b ⊔ c)
