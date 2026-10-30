@@ -267,8 +267,8 @@ module VA2 {a b c}
 \subsection{lo se ctaipe co su'u pavdzakai / The Uniqueness Types}
 
 \begin{code}
-  FricaC : (I → B) → Set (b ⊔ c)
-  FricaC i = (j k : I) → i j ≈ i k → Interval._≈_ Iv j k
+  Inj : (I → B) → Set (b ⊔ c)
+  Inj i = (j k : I) → i j ≈ i k → Interval._≈_ Iv j k
 \end{code}
 
 \subsection{lo se ctaipe co su'u jorne pe'a / The Types regarding ``Connectedness''}
@@ -280,7 +280,7 @@ SIMPLIFICATION.\@  VARIK opines that (a term of \F J \B x \B z\ exists iff \B x 
 
 \begin{code}
   J : A → A → Set (b ⊔ c)
-  J x z = Σ (I → B) $ λ i → FricaC i × (f x ≈ i i0) × (f z ≈ i i1)
+  J x z = Σ (I → B) $ λ i → Inj i × (f x ≈ i i0) × (f z ≈ i i1)
 \end{code}
 
 \subsection{lo se ctaipe co su'u ranji pe'a smuvrici / The Types regarding Vagueness}
