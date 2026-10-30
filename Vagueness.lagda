@@ -264,60 +264,84 @@ module VA2 {a b c}
     )
 \end{code}
 
+\subsection{lo se ctaipe co su'u pluta pe'a dunli / The Types regarding Path-Equality}
+
 \begin{code}
   FricaC : (I → B) → Set (b ⊔ c)
   FricaC i = (j k : I) → i j ≈ i k → Interval._≈_ Iv j k
 \end{code}
+
+\subsection{lo se ctaipe co su'u jorne pe'a / The Types regarding ``Connectedness''}
 
 \begin{code}
   J : A → A → Set (b ⊔ c)
   J x z = Σ (I → B) $ λ i → FricaC i × (f x ≈ i i0) × (f z ≈ i i1)
 \end{code}
 
+\subsection{lo se ctaipe co su'u ranji pe'a smuvrici / The Types regarding Vagueness}
+
 \begin{code}
   Vg : Set (a ⊔ b ⊔ c)
   Vg = (x z : A) → J x z
 \end{code}
+
+\subsection{lo se ctaipe co su'u na'e ranji pe'a smuvrici / The Types regarding Ambiguity}
 
 \begin{code}
   Am : typeOf Vg
   Am = ∃ $ ¬_ ∘ uncurry J
 \end{code}
 
+\subsection{le ctaipe be le su'u na'e ranji pe'a smuvrici naja cu na'e ke ranji pe'a smuvrici / The Proof of that (Ambiguity Implies Non-Vagueness)}
+
 \begin{code}
   Am→¬Vg : Am → ¬ Vg
   Am→¬Vg ((x , z) , N) vg = N $ vg x z
 \end{code}
+
+\subsection{le se ctaipe co su'u pavysmu / The Specific/Precise Type}
 
 \begin{code}
   Sp : Set (a ⊔ b)
   Sp = (x z : A) → f x ≈ f z
 \end{code}
 
+\subsection{le se ctaipe co su'u prane pe'a lo ka ce'u ranji pe'a smuvrici / The Types regarding ``Pure'' Vagueness}
+
 \begin{code}
   Vg! : Set (a ⊔ b ⊔ c)
   Vg! = Vg × ¬ Sp
 \end{code}
+
+\subsection{le se ctaipe co su'u prane pe'a lo ka ce'u na'e ranji pe'a smuvrici / The Types regarding ``Pure'' Ambiguity}
 
 \begin{code}
   Am! : typeOf Am
   Am! = Am × ¬ Sp
 \end{code}
 
+\subsection{le ctaipe be le su'u ranji pe'a smuvrici janai cu prane le ka ce'u ranji pe'a smuvrici / The Proof of that (``Perfect'' Vagueness Implies Vagueness)}
+
 \begin{code}
   Vg!→Vg : Vg! → Vg
   Vg!→Vg = Σ.proj₁
 \end{code}
+
+\subsection{le ctaipe be le su'u na'e ranji pe'a smuvrici naja cu na'e pavysmu / The Proof of that (Ambiguity Implies Non-Specificity)}
 
 \begin{code}
   Am→¬Sp : Am → ¬ Sp
   Am→¬Sp ((x , z) , N) sp = N $ {!!} , {!!} , {!!}
 \end{code}
 
+\subsection{le ctaipe be le su'u na'e ranji pe'a smuvrici janai cu prane le ka ce'u na'e ranji pe'a smuvrici / The Proof of that (``Perfect'' Ambiguity Implies Ambiguity)}
+
 \begin{code}
   Am!→Am : Am! → Am
   Am!→Am = Σ.proj₁
 \end{code}
+
+\subsection{la'o zoi.\ \F{VA→VA2}\ .zoi.}
 
 \begin{code}
 VA→VA2 : ∀ {a b c} → {A : Set a} → {B : A → Set b}
