@@ -207,8 +207,8 @@ module VA {a b c}
 \subsection{lo se ctaipe co su'u pavdzakai / The Uniqueness Types}
 
 \begin{code}
-  FricaC : {t : A} → (I → B t) → Set (b ⊔ c)
-  FricaC i = (j k : I) → _≈_ _ (i j) (i k) → Interval._≈_ Iv j k
+  Inj : {t : A} → (I → B t) → Set (b ⊔ c)
+  Inj i = (j k : I) → _≈_ _ (i j) (i k) → Interval._≈_ Iv j k
 \end{code}
 
 \subsection{lo se ctaipe co su'u jorne pe'a / The Types regarding ``Connectedness''}
@@ -218,7 +218,7 @@ module VA {a b c}
   J {t} x z = (Σ
                 (I → B t)
                 (λ f → _×_
-                  (FricaC f)
+                  (Inj f)
                   (_≈_ t x (f i0) × _≈_ t z (f i1))))
 \end{code}
 
