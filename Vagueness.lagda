@@ -204,7 +204,7 @@ module VA {a b c}
     )
 \end{code}
 
-\subsection{lo se ctaipe co su'u pluta pe'a dunli / The Types regarding Path-Equality}
+\subsection{lo se ctaipe co su'u pavdzakai / The Uniqueness Types}
 
 \begin{code}
   FricaC : {t : A} → (I → B t) → Set (b ⊔ c)
