@@ -194,7 +194,7 @@ module VA {a b c}
           (A : Set a)
           (B : A → Set b)
           (Iv : Interval c)
-          (_≈_ : (x : A) → (_ _ : B x) → Set b)
+          (_≈_ : (x : A) → B x → B x → Set b)
   where
   open Interval Iv
     using (
