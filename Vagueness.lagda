@@ -214,7 +214,7 @@ module VA {a b c}
 \subsection{lo se ctaipe co su'u jorne pe'a / The Types regarding ``Connectedness''}
 
 \begin{code}
-  J : {t : A} → (_ _ : B t) → Set (b ⊔ c)
+  J : {t : A} → B t → B t → Set (b ⊔ c)
   J {t} x z = (Σ
                 (I → B t)
                 (λ f → _×_
