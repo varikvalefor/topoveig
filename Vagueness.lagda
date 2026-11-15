@@ -114,7 +114,7 @@
 \section{le te kajde}
 \paragraph{la .lojban.}
 ni'o vy goi la .varik.\ cu kajde fi zo'e joi le su'u su'o da zo'u vo'a na'e skicu da bau la .lojban.\ ja le glibau ki'u zo'e joi lo su'u vo'a na jinvi lo du'u lo nu skicu da bau la .lojban.\ ja le glibau cu jai filri'a lo nu mutce lo ka ce'u jimpe fi da\sds  .i ji'a vy jinvi le du'u le gerna be la'oi .Agda.\ cu zmadu fi le ka ce'u mapti\sds  .i ji'a su'u da zo'u vy jinvi le du'u lo da'i velski be tu'a da cu velski zo'e ja lo se ctaipe be da je cu ronsa lo me'oi .Agda.\ velcki be da\\
-.i ku'i vy cu co'e ja djica curmi lo nu retsku\sds  .i vy na djuno le du'u lo nu retsku na filri'a lo nu facki fi lo velski je jai filri'a
+.i ku'i vy co'e ja djica curmi lo nu retsku\sds  .i vy na djuno le du'u lo nu retsku na filri'a lo nu facki fi lo velski je jai filri'a
 
 \paragraph{English}
 VARIK cautions.  Some thing $t$ exists such that (VARIK does not explain (via English or Lojban) $t$, and the reason for not explaining is relevant to that (VARIK does not opine that explaining (via English or Lojban) $t$ facilitates being extreme in understanding about $t$)).  Additionally, VARIK opines that the syntax of Agda exceeds in being appropriate.  Additionally, some thing $t$ exists such that VARIK opines that a description of $t$ is a description of the type/whatever of $t$ and is redundant with the Agda definition of $t$.\\
