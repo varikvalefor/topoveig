@@ -246,7 +246,7 @@ VARIK opines that for all \B t, iff a term of \F{Am} \B t exists, then a thing w
   Am t = ∃ $ ¬_ ∘ uncurry (J {t})
 \end{code}
 
-\section{le zmadu be fi le ka la .varik.\ cu jinvi lo du'u frili fa lo nu pilno ce'u / The Thing which (as-opined-by VARIK) Exceeds in Being Easy and in Being Usable}
+\section{le zmadu be fi le ka la .varik.\ cu jinvi lo du'u frili fa lo nu ciksi fo lo srana be ce'u / The Thing which (as-opined-by VARIK) Exceeds in Being Easy and in Being Usable}
 
 \begin{code}
 module VA2 {a b c}
