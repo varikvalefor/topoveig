@@ -214,12 +214,13 @@ module VA {a b c}
 \subsection{lo se ctaipe co su'u jorne pe'a / The Types regarding ``Connectedness''}
 
 \begin{code}
-  J : {t : A} → B t → B t → Set (b ⊔ c)
-  J {t} x z = (Σ
-                (I → B t)
-                (λ f → _×_
-                  (Inj f)
-                  (_≈_ t x (f i0) × _≈_ t z (f i1))))
+  record J {t : A} (x : B t) (z : B t) : Set (b ⊔ c)
+    where
+    field
+     f : I → B t
+     inj : Inj f
+     d₀ : _≈_ t x (f i0)
+     d₁ : _≈_ t z (f i1)
 \end{code}
 
 \subsection{lo se ctaipe co su'u ranji pe'a smuvrici / The Types regarding Vagueness}
@@ -348,7 +349,7 @@ VA→VA2 : ∀ {a b c} → {A : Set a} → {B : A → Set b}
        → (_≈_ : (x : A) → (_ _ : B x) → Set b)
        → VA.Vg A B Iv _≈_ x
        → VA2.Vg (B x) (B x) id Iv (_≈_ _)
-VA→VA2 _ _ _ = id
+VA→VA2 _ _ _ = {!!}
 \end{code}
 
 \section{le mupli / Examples}
