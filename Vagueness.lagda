@@ -353,7 +353,7 @@ VA→VA2 x Iv _≈_ vg b1 b2 = VA.J.f (v) , VA.J.inj (v) , d₀ , d₁
   where
   v = vg b1 b2
   d₀ = VA.J.d₀ v
-  d₁ = VA.J.d₁ $ v
+  d₁ = VA.J.d₁ v
 \end{code}
 
 \section{le mupli / Examples}
