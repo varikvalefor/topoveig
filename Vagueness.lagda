@@ -349,7 +349,7 @@ VA→VA2 : ∀ {a b c} → {A : Set a} → {B : A → Set b}
        → (_≈_ : (x : A) → (_ _ : B x) → Set b)
        → VA.Vg A B Iv _≈_ x
        → VA2.Vg (B x) (B x) id Iv (_≈_ _)
-VA→VA2 x Iv _≈_ vg b1 b2 = VA.J.f (v) , VA.J.inj (v) , d₀ , d₁
+VA→VA2 x Iv _≈_ vg b1 b2 = VA.J.f v , VA.J.inj (v) , d₀ , d₁
   where
   v = vg b1 b2
   d₀ = VA.J.d₀ v
