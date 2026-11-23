@@ -214,7 +214,7 @@ module VA {a b c}
 \subsection{lo se ctaipe co su'u jorne pe'a / The Types regarding ``Connectedness''}
 
 \begin{code}
-  record J {t : A} (x : B t) (z : B t) : Set (b ⊔ c)
+  record J {t : A} (x z : B t) : Set (b ⊔ c)
     where
     field
      f : I → B t
