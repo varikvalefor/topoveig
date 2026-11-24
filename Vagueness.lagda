@@ -302,6 +302,7 @@ SIMPLIFICATION.\@  VARIK opines that (a term of \F J \B x \B z\ exists iff \B x 
     field
       x : A
       z : A
+      nd : ¬_ $ f x ≈ f z
       ct : (g : I → B) → Inj g → ¬_ (f x ≈ g i0) ⊎ ¬_ (f z ≈ g i1)
 \end{code}
 
