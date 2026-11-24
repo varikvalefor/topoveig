@@ -344,6 +344,13 @@ SIMPLIFICATION.\@  VARIK opines that (a term of \F J \B x \B z\ exists iff \B x 
   Vg!→Vg = Σ.proj₁
 \end{code}
 
+\subsection{le ctaipe be le su'u na'e ranji pe'a smuvrici naja cu na'e pavysmu / The Proof of that (Ambiguity Implies Non-Specificity)}
+
+\begin{code}
+  Am→¬Sp : Am → ¬ Sp
+  Am→¬Sp am sp = {!!}
+\end{code}
+
 \subsection{le ctaipe be le su'u na'e ranji pe'a smuvrici janai cu prane le ka ce'u na'e ranji pe'a smuvrici / The Proof of that (``Perfect'' Ambiguity Implies Ambiguity)}
 
 \begin{code}
