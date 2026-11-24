@@ -302,7 +302,7 @@ SIMPLIFICATION.\@  VARIK opines that (a term of \F J \B x \B z\ exists iff \B x 
     field
       x : A
       z : A
-      ct : (g : I → B) → ¬_ (f x ≈ g i0) ⊎ ¬_ (f z ≈ g i1)
+      ct : (g : I → B) → Inj g → ¬_ (f x ≈ g i0) ⊎ ¬_ (f z ≈ g i1)
 \end{code}
 
 \subsection{le ctaipe be le su'u na'e ranji pe'a smuvrici naja cu na'e ke ranji pe'a smuvrici / The Proof of that (Ambiguity Implies Non-Vagueness)}
