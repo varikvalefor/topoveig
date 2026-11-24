@@ -353,7 +353,7 @@ VA→VA2 : ∀ {a b c} → {A : Set a} → {B : A → Set b}
        → (_≈_ : (x : A) → (_ _ : B x) → Set b)
        → VA.Vg A B Iv _≈_ x
        → VA2.Vg (B x) (B x) id Iv (_≈_ _)
-VA→VA2 _ _ _≈_ vg b1 b2 = record {
+VA→VA2 _ _ _ vg b1 b2 = record {
   g = VA.J.f v;
   inj = VA.J.inj v;
   d₀ = VA.J.d₀ v;
