@@ -356,12 +356,11 @@ VA→VA2 : ∀ {a b c} → {A : Set a} → {B : A → Set b}
 VA→VA2 x Iv _≈_ vg b1 b2 = record {
   g = VA.J.f v;
   inj = VA.J.inj v;
-  d₀ = d₀;
+  d₀ = VA.J.d₀ v;
   d₁ = d₁
   }
   where
   v = vg b1 b2
-  d₀ = VA.J.d₀ v
   d₁ = VA.J.d₁ v
 \end{code}
 
