@@ -349,7 +349,7 @@ SIMPLIFICATION.\@  VARIK opines that (a term of \F J \B x \B z\ exists iff \B x 
 
 \begin{code}
   Am→¬Sp : Am → ¬ Sp
-  Am→¬Sp am sp = {!!}
+  Am→¬Sp am sp = Am.nd am $ sp (Am.x am) $ Am.z am
 \end{code}
 
 \subsection{le ctaipe be le su'u na'e ranji pe'a smuvrici janai cu prane le ka ce'u na'e ranji pe'a smuvrici / The Proof of that (``Perfect'' Ambiguity Implies Ambiguity)}
