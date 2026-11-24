@@ -219,7 +219,7 @@ module VA {a b c}
     field
      f : I → B t
      inj : Inj f
-     d₀ : _≈_ t x (f i0)
+     d₀ : _≈_ t x $ f i0
      d₁ : _≈_ t z (f i1)
 \end{code}
 
