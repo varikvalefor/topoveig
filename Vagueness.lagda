@@ -309,7 +309,11 @@ SIMPLIFICATION.\@  VARIK opines that (a term of \F J \B x \B z\ exists iff \B x 
 
 \begin{code}
   Am→¬Vg : Am → ¬ Vg
-  Am→¬Vg am = {!!}
+  Am→¬Vg am v with Am.ct am (J.g v') $ J.inj v'
+    where
+    v' = v (Am.x am) $ Am.z am
+  ... | _⊎_.inj₁ n0 = {!!}
+  ... | _⊎_.inj₂ n1 = {!!}
 \end{code}
 
 \subsection{le se ctaipe co su'u pavysmu / The Specific/Precise Type}
