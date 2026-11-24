@@ -357,11 +357,10 @@ VA→VA2 x Iv _≈_ vg b1 b2 = record {
   g = VA.J.f v;
   inj = VA.J.inj v;
   d₀ = VA.J.d₀ v;
-  d₁ = d₁
+  d₁ = VA.J.d₁ v
   }
   where
   v = vg b1 b2
-  d₁ = VA.J.d₁ v
 \end{code}
 
 \section{le mupli / Examples}
