@@ -280,7 +280,7 @@ ni'o sa'u la .varik.\ cu jinvi le du'u ga jo ctaipe la'o zoi.\ \F J \B x \B z\ .
 SIMPLIFICATION.\@  VARIK opines that (a term of \F J \B x \B z\ exists iff \B x is non-trivially \B f-connected to \B z).
 
 \begin{code}
-  record J (x : A) (z : A) : Set (b ⊔ c) where
+  record J (x z : A) : Set (b ⊔ c) where
     field
       g : I → B
       inj : Inj g
