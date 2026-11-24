@@ -280,8 +280,12 @@ ni'o sa'u la .varik.\ cu jinvi le du'u ga jo ctaipe la'o zoi.\ \F J \B x \B z\ .
 SIMPLIFICATION.\@  VARIK opines that (a term of \F J \B x \B z\ exists iff \B x is non-trivially \B f-connected to \B z).
 
 \begin{code}
-  J : A → A → Set (b ⊔ c)
-  J x z = Σ (I → B) $ λ i → Inj i × (f x ≈ i i0) × (f z ≈ i i1)
+  record J (x : A) (z : A) : Set (b ⊔ c) where
+    field
+      g : I → B
+      inj : Inj g
+      d₀ : f x ≈ g i0
+      d₁ : f z ≈ g i1
 \end{code}
 
 \subsection{lo se ctaipe co su'u ranji pe'a smuvrici / The Types regarding Vagueness}
@@ -349,7 +353,12 @@ VA→VA2 : ∀ {a b c} → {A : Set a} → {B : A → Set b}
        → (_≈_ : (x : A) → (_ _ : B x) → Set b)
        → VA.Vg A B Iv _≈_ x
        → VA2.Vg (B x) (B x) id Iv (_≈_ _)
-VA→VA2 x Iv _≈_ vg b1 b2 = VA.J.f v , VA.J.inj v , d₀ , d₁
+VA→VA2 x Iv _≈_ vg b1 b2 = record {
+  g = VA.J.f v;
+  inj = VA.J.inj v;
+  d₀ = d₀;
+  d₁ = d₁
+  }
   where
   v = vg b1 b2
   d₀ = VA.J.d₀ v
