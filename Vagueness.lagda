@@ -298,15 +298,18 @@ SIMPLIFICATION.\@  VARIK opines that (a term of \F J \B x \B z\ exists iff \B x 
 \subsection{lo se ctaipe co su'u na'e ranji pe'a smuvrici / The Types regarding Ambiguity}
 
 \begin{code}
-  Am : typeOf Vg
-  Am = ∃ $ ¬_ ∘ uncurry J
+  record Am : typeOf Vg where
+    field
+      x : A
+      z : A
+      ct : (g : I → B) → ¬_ (f x ≈ g i0) ⊎ ¬_ (f z ≈ g i1)
 \end{code}
 
 \subsection{le ctaipe be le su'u na'e ranji pe'a smuvrici naja cu na'e ke ranji pe'a smuvrici / The Proof of that (Ambiguity Implies Non-Vagueness)}
 
 \begin{code}
   Am→¬Vg : Am → ¬ Vg
-  Am→¬Vg ((x , z) , N) vg = N $ vg x z
+  Am→¬Vg am = {!!}
 \end{code}
 
 \subsection{le se ctaipe co su'u pavysmu / The Specific/Precise Type}
