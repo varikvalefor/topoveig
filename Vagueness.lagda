@@ -66,6 +66,7 @@
 \newunicodechar{∀}{\ensuremath{\mathnormal{\forall}}}
 \newunicodechar{ℓ}{\ensuremath{\mathnormal{\ell}}}
 \newunicodechar{σ}{\ensuremath{\mathnormal{\sigma}}}
+\newunicodechar{₀}{\ensuremath{\mathnormal{_0}}}
 \newunicodechar{₁}{\ensuremath{\mathnormal{_1}}}
 \newunicodechar{₂}{\ensuremath{\mathnormal{_2}}}
 \newunicodechar{ₘ}{\ensuremath{\mathnormal{_\mathsf{m}}}}
