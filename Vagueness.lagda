@@ -251,12 +251,12 @@ VARIK opines that for all \B t, iff a term of \F{Am} \B t exists, then a thing w
 \section{le zmadu be fi le ka la .varik.\ cu jinvi lo du'u frili fa lo nu ciksi fo lo srana be ce'u / The Thing which (as-opined-by VARIK) Exceeds in Being Easy and in Being Usable}
 
 \begin{code}
-module VA2 {a b c}
+module VA2 {a b c d}
            (A : Set a)
            (B : Set b)
            (f : A → B)
            (Iv : Interval c)
-           (_≈_ : B → B → Set b)
+           (_≈_ : B → B → Set d)
   where
   open Interval Iv
     using (
@@ -269,7 +269,7 @@ module VA2 {a b c}
 \subsection{lo se ctaipe co su'u pavdzakai / The Uniqueness Types}
 
 \begin{code}
-  Inj : (I → B) → Set (b ⊔ c)
+  Inj : (I → B) → Set (c ⊔ d)
   Inj i = (j k : I) → i j ≈ i k → Interval._≈_ Iv j k
 \end{code}
 
@@ -281,7 +281,7 @@ ni'o sa'u la .varik.\ cu jinvi le du'u ga jo ctaipe la'o zoi.\ \F J \B x \B z\ .
 SIMPLIFICATION.\@  VARIK opines that (a term of \F J \B x \B z\ exists iff \B x is non-trivially \B f-connected to \B z).
 
 \begin{code}
-  record J (x z : A) : Set (b ⊔ c) where
+  record J (x z : A) : Set (b ⊔ c ⊔ d) where
     field
       g : I → B
       inj : Inj g
@@ -292,7 +292,7 @@ SIMPLIFICATION.\@  VARIK opines that (a term of \F J \B x \B z\ exists iff \B x 
 \subsection{lo se ctaipe co su'u ranji pe'a smuvrici / The Types regarding Vagueness}
 
 \begin{code}
-  Vg : Set (a ⊔ b ⊔ c)
+  Vg : Set (a ⊔ b ⊔ c ⊔ d)
   Vg = (x z : A) → J x z
 \end{code}
 
@@ -321,21 +321,21 @@ SIMPLIFICATION.\@  VARIK opines that (a term of \F J \B x \B z\ exists iff \B x 
 \subsection{le se ctaipe co su'u pavysmu / The Specific/Precise Type}
 
 \begin{code}
-  Sp : Set (a ⊔ b)
+  Sp : Set (a ⊔ d)
   Sp = (x z : A) → f x ≈ f z
 \end{code}
 
 \subsection{le se ctaipe co su'u prane pe'a lo ka ce'u ranji pe'a smuvrici / The Types regarding ``Pure'' Vagueness}
 
 \begin{code}
-  Vg! : Set (a ⊔ b ⊔ c)
+  Vg! : Set (a ⊔ b ⊔ c ⊔ d)
   Vg! = Vg × ¬ Sp
 \end{code}
 
 \subsection{le se ctaipe co su'u prane pe'a lo ka ce'u na'e ranji pe'a smuvrici / The Types regarding ``Pure'' Ambiguity}
 
 \begin{code}
-  Am! : typeOf Am
+  Am! : typeOf Vg!
   Am! = Am × ¬ Sp
 \end{code}
 
