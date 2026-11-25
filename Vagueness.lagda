@@ -191,11 +191,11 @@ record Interval a : Set (Level.suc a) where
 \section{le mutce be le ka ce'u sucta / The Thing which is Very Abstract}
 
 \begin{code}
-module VA {a b c}
+module VA {a b c d}
           (A : Set a)
           (B : A → Set b)
           (Iv : Interval c)
-          (_≈_ : (x : A) → B x → B x → Set b)
+          (_≈_ : (x : A) → B x → B x → Set d)
   where
   open Interval Iv
     using (
@@ -208,14 +208,14 @@ module VA {a b c}
 \subsection{lo se ctaipe co su'u pavdzakai / The Uniqueness Types}
 
 \begin{code}
-  Inj : {t : A} → (I → B t) → Set (b ⊔ c)
+  Inj : {t : A} → (I → B t) → Set (d ⊔ c)
   Inj i = (j k : I) → _≈_ _ (i j) (i k) → Interval._≈_ Iv j k
 \end{code}
 
 \subsection{lo se ctaipe co su'u jorne pe'a / The Types regarding ``Connectedness''}
 
 \begin{code}
-  record J {t : A} (x z : B t) : Set (b ⊔ c)
+  record J {t : A} (x z : B t) : Set (b ⊔ c ⊔ d)
     where
     field
      f : I → B t
@@ -232,7 +232,7 @@ ni'o la .varik.\ cu jinvi le du'u ro da zo'u ga jo ctaipe lo me'oi .\F{Vg}.\ be 
 VARIK opines that for all \B t, iff a term of \F{Vg} \B t exists, then all terms of \B B \B t are ``connected'' to all terms of \B B \B t.
 
 \begin{code}
-  Vg : A → Set (b ⊔ c)
+  Vg : A → Set (b ⊔ c ⊔ d)
   Vg t = (x z : B t) → J x z
 \end{code}
 
@@ -244,7 +244,7 @@ ni'o la .varik.\ cu jinvi le du'u ro da zo'u ga jo ctaipe lo me'oi .\F{Am}.\ be 
 VARIK opines that for all \B t, iff a term of \F{Am} \B t exists, then a thing which is \emph{false} is that all terms of \B B \B t are ``connected'' to all terms of \B B \B t.
 
 \begin{code}
-  Am : A → Set (b ⊔ c)
+  Am : A → Set (b ⊔ c ⊔ d)
   Am t = ∃ $ ¬_ ∘ uncurry (J {t})
 \end{code}
 
