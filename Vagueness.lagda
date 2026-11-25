@@ -178,7 +178,7 @@ open import Relation.Binary.PropositionalEquality
 \section{le me'oi .interval.\ se ctaipe / The Interval Type}
 
 \begin{code}
-record Interval a : Set (Agda.Primitive.lsuc a) where
+record Interval a : Set (Level.suc a) where
   field
     I : Set a
     i0 : I
